@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product E-shop</title>
+    <title>Cart E-shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,7 +19,7 @@
             <div class="right">
                 <a href="#"><img src="img/menu.svg" alt="menu"></a>
                 <a href="#"><img src="img/login.svg" alt="login"></a>
-                <a href="cart.html" target="_blank"><img src="img/basket.svg" alt="basket"></a>
+                <a href="#"><img src="img/basket.svg" alt="basket"></a>
                 <!-- <div class="menu">
                     <details>
                         <summary>MENU</summary>
@@ -60,99 +60,60 @@
     <main>
         <section class="banner__catalog">
             <div class="under__banner container">
-                <h1>New ARRIVALS</h1>
-                <nav>
-                    <a href="index.html">Home</a>
-                    <p>/</p>
-                    <a href="catalog.html">Men</a>
-                    <p>/</p>
-                    <a href="#"> <span>New ARRIVALS</span> </a>
-                </nav>
+                <h1>SHOPPING CART</h1>
             </div>
         </section>
-        <section class="banner_product">
-            <div class="product_page container">
-                <a href="#"><img class="product_arrow" src="img/arrow_black_left.svg" alt="arrow_black_left"></a>
-                <div class="product_slide">
-                    <img class="product_photo" src="img/product.png" alt="product_photo">
-                </div>
-                <a href="#"><img class="product_arrow" src="img/Arrow_red_right.svg" alt="Arrow_red_right"></a>
-            </div>
-        </section>
-        <section class="product_inform">
-            <div class="product_specification container">
-                <h3 class="product_title">WOMEN COLLECTION</h3>
-                <hr>
-                <h2 class="product_name_inform">MOSCHINO CHEAP AND CHIC</h2>
-                <p class="product_discription">Compellingly actualize fully researched processes before proactive
-                    outsourcing. Progressively syndicate collaborative architectures before <nobr>cutting-edge
-                    </nobr>
-                    services. Completely visualize parallel core competencies rather than exceptional portals </p>
-                <span class="product_price_red">$ 561.00</span>
-                <hr>
-                <div class="product_filters">
-                    <details class="product_filter1">
-                        <summary>CHOOSE COLOR</summary>
-                    </details>
-                    <details class="product_filter2">
-                        <summary>CHOOSE SIZE</summary>
-                    </details>
-                    <details class="product_filter3">
-                        <summary>QUANTITY</summary>
-                    </details>
-                </div>
-                <a class="product_button_box" href="">Add to Cart</a>
-            </div>
-        </section>
-        <section class="center__block">
-            <div class="product container">
-                <div class="product__box">
+        <section class="center__cart container">
+            <div>
+                <div class="product__cart">
                     <div class="item">
                         <img src="img/Item1.png" alt="item1">
-                        <a href="">Add to Cart</a>
                     </div>
-                    <h2><b>ELLERY X M'O CAPSULE</b></h2>
-                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter
-                        of
-                        cool
-                        Kym
-                        Ellery teams up with Moda Operandi.</p>
-                    <span>$ 52.00</span>
-
+                    <div class="product__text">
+                        <h2><b>MANGO PEOPLE <nobr>T-SHIRT</nobr></b></h2>
+                        <p>Price: <span>$300</span></p>
+                        <p>Color: Red</p>
+                        <p>Size: XL</p>
+                        <p>Quantity: <input name="number" type="number" checked></p>
+                    </div>
+                    <div class="close"></div>
                 </div>
-                <div class="product__box">
+                <div class="product__cart">
                     <div class="item">
-                        <img src="img/Item3.png" alt="item1">
-                        <a href="">Add to Cart</a>
+                        <img src="img/Item1.png" alt="item1">
                     </div>
-                    <h2><b>ELLERY X M'O CAPSULE</b></h2>
-                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter
-                        of
-                        cool
-                        Kym
-                        Ellery teams up with Moda Operandi.</p>
-                    <span>$ 52.00</span>
-                </div>
-                <div class="product__box">
-                    <div class="item">
-                        <img src="img/Item6.png" alt="item1">
-                        <a href="">Add to Cart</a>
+                    <div class="product__text">
+                        <h2><b>MANGO PEOPLE <nobr>T-SHIRT</nobr></b></h2>
+                        <p>Price: <span>$300</span></p>
+                        <p>Color: Red</p>
+                        <p>Size: XL</p>
+                        <p>Quantity: <input name="number" type="number" checked></p>
                     </div>
-                    <h2><b>ELLERY X M'O CAPSULE</b></h2>
-                    <p>Known for her sculptural takes on traditional tailoring, Australian arbiter
-                        of
-                        cool
-                        Kym
-                        Ellery teams up with Moda Operandi.</p>
-                    <span>$ 52.00</span>
+                    <div class="close"></div>
+
                 </div>
+            </div>
+            <div class="action">
+                <form action="#">
+                    <h4>SHIPPING ADRESS</h4>
+                    <input type="city" placeholder="Tape Your City">
+                    <input type="state" placeholder="State">
+                    <input type="postcode" placeholder="Postcode/ZIP">
+                    <button type="submit">Get a quote</button>
+                </form>
+                <div class="total">
+                    <p>SUB TOTAL <span>$900</span></p>
+                    <h4>GRAND TOTAL <span>$900</span></h4>
+                    <hr>
+                    <button>PROCEED TO CHECKOUT</button>
 
-
+                </div>
             </div>
         </section>
-
-
-
+        <section class="button__cart container">
+            <button>CLEAR SHOPPING CART</button>
+            <button><a href="catalog.html">CONTINUE SHOPPING</a></button>
+        </section>
     </main>
     <footer>
         <section class="footer container">
@@ -207,7 +168,6 @@
             </div>
         </section>
     </footer>
-
 </body>
 
 </html>
