@@ -91,7 +91,7 @@ button {
 .banner {
     background-color: #f1e4e6;
     .under__header {
-        background: url(img/men.png) no-repeat -228px;
+        background: url(img/men.png) no-repeat -199px;
         display: flex;
         height: calc(100vh - 80px);
         background-size: calc(100vh - 15px);
@@ -893,6 +893,7 @@ button {
         height: 50px;
         background: #ffffff;
         margin-top: 72px;
+        border: 1px solid #000;
     }
 }
 /*------------Registration---------*/
