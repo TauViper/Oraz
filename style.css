@@ -72,7 +72,7 @@ button {
   background: url(img/men.png) no-repeat -199px;
   display: flex;
   height: calc(100vh - 80px);
-  background-size: calc(100vh - 15px);
+  background-size: contain;
   align-items: center;
   justify-content: end;
 }
@@ -975,7 +975,7 @@ button {
 @media (max-width: 768px) {
   .banner .under__header {
     background: url(img/men.png) no-repeat -158px;
-    background-size: calc(100vh - 44px);
+    background-size: contain;
   }
   .banner .under__header h1 {
     max-width: 328px;
@@ -1034,7 +1034,7 @@ button {
 
   .card__box:not(:last-child) {
     width: 100%;
-    height: 292px;
+    height: 260px;
   }
 
   .footer__box {

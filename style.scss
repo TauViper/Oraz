@@ -94,7 +94,8 @@ button {
         background: url(img/men.png) no-repeat -199px;
         display: flex;
         height: calc(100vh - 80px);
-        background-size: calc(100vh - 15px);
+        // background-size: calc(100vh - 15px);
+        background-size: contain;
         @include alight__end();
         & h1 {
             padding-left: 20px;
@@ -1003,7 +1004,8 @@ button {
     .banner {
         .under__header {
             background: url(img/men.png) no-repeat -158px;
-            background-size: calc(100vh - 44px);
+            // background-size: calc(100vh - 44px);
+            background-size: contain;
             & h1 {
                 max-width: 328px;
                 font-size: 24px;
@@ -1076,7 +1078,7 @@ button {
     .card__box {
         &:not(:last-child) {
             width: 100%;
-            height: 292px;
+            height: 260px;
         }
     }
 
