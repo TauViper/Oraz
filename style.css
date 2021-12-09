@@ -11,6 +11,10 @@ button {
   cursor: pointer;
 }
 
+label {
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +22,7 @@ button {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1130px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -53,23 +57,72 @@ button {
 }
 .header .heading .menu {
   box-sizing: border-box;
-  position: absolute;
-  top: 79px;
-  left: 1600px;
-  width: 232px;
-  height: calc(100vh - 80px);
-  background: #ffffff;
-  padding-left: 34px;
+  margin-right: 33px;
+  z-index: 2;
   font-size: 14px;
   line-height: 17px;
+  position: relative;
+}
+.header .heading .menu #menu {
+  display: none;
+}
+.header .heading .menu #menu:checked ~ .menu__nav {
+  display: block;
+}
+.header .heading .menu #menu:not(:checked) ~ .menu__nav {
+  display: none;
+}
+.header .heading .menu__nav {
+  width: 232px;
+  position: absolute;
+  height: calc(100vh - 80px);
+  background: #ffffff;
+  top: 60px;
+  right: -344px;
+  padding: 20px;
   overflow-y: scroll;
+}
+.header .heading .menu__nav div {
+  position: relative;
+}
+.header .heading .menu__nav div label {
+  position: absolute;
+  right: -13px;
+  top: -13px;
+}
+.header .heading .menu__nav div ul {
+  list-style-type: none;
+}
+.header .heading .menu__nav div h2 {
+  padding-left: 14px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: Lato;
+}
+.header .heading .menu__nav div h3 {
+  margin: 13px 0;
+  color: #f16d7f;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: Lato;
+  padding-left: 14px;
+}
+.header .heading .menu__nav div ul > li {
+  padding-left: 34px;
+}
+.header .heading .menu__nav div ul > li:not(:last-child) {
+  margin-bottom: 11px;
+}
+.header .heading .menu__nav div ul > li > a {
+  text-decoration: none;
 }
 
 .banner {
   background-color: #f1e4e6;
 }
 .banner .under__header {
-  background: url(img/men.png) no-repeat -199px;
+  background: url(img/men.png) no-repeat left;
   display: flex;
   height: calc(100vh - 80px);
   background-size: contain;
@@ -81,7 +134,8 @@ button {
   border-left: 12px solid #f16d7f;
   text-transform: uppercase;
   max-width: 425px;
-  font-size: 32px;
+  font-size: 30px;
+  margin-right: 99px;
 }
 .banner .under__header h1 > b {
   font-weight: 900;
@@ -973,10 +1027,12 @@ button {
 }
 
 @media (max-width: 768px) {
-  .banner .under__header {
-    background: url(img/men.png) no-repeat -158px;
-    background-size: contain;
+  .header .heading .menu__nav {
+    right: -137px;
+    width: 172px;
+    top: 60px;
   }
+
   .banner .under__header h1 {
     max-width: 328px;
     font-size: 24px;
@@ -1022,14 +1078,14 @@ button {
 
   .banner .under__header {
     background-image: none;
-    height: 363px;
   }
   .banner .under__header h1 {
     max-width: 343px;
-    font-size: 24px;
+    font-size: 21px;
+    margin: 0;
   }
   .banner .under__header h1 > b {
-    font-size: 44px;
+    font-size: 35px;
   }
 
   .card__box:not(:last-child) {
@@ -1058,9 +1114,21 @@ button {
     align-items: center;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 350px) and (max-width: 425px) {
+  .header {
+    padding: 7px 0;
+  }
+  .header .heading .menu__nav {
+    right: -42px;
+    width: 172px;
+    top: 49px;
+  }
+
   .center__block .product__box {
-    width: 317px;
+    width: 292px;
+  }
+  .center__block .product__box .item img {
+    width: 292px;
   }
 
   .card__box:not(:last-child) {

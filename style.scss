@@ -33,13 +33,16 @@ details {
 button {
     cursor: pointer;
 }
+label {
+    cursor: pointer;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 .container {
-    max-width: 1160px;
+    max-width: 1130px;
     padding: 0 10px;
     margin: 0 auto;
 }
@@ -75,34 +78,87 @@ button {
         }
         .menu {
             box-sizing: border-box;
-            position: absolute;
-            top: 79px;
-            left: 1600px;
-            width: 232px;
-            height: calc(100vh - 80px);
-            background: #ffffff;
-            padding-left: 34px;
+
+            margin-right: 33px;
+            z-index: 2;
             font-size: 14px;
             line-height: 17px;
-            overflow-y: scroll;
+            position: relative;
+            #menu {
+                display: none;
+                &:checked ~ .menu__nav {
+                    display: block;
+                }
+                &:not(:checked) ~ .menu__nav {
+                    display: none;
+                }
+            }
+            &__nav {
+                width: 232px;
+                position: absolute;
+                height: calc(100vh - 80px);
+                background: #ffffff;
+                top: 60px;
+                right: -344px;
+                padding: 20px;
+                overflow-y: scroll;
+                & div {
+                    position: relative;
+                    & label {
+                        position: absolute;
+                        right: -13px;
+                        top: -13px;
+                    }
+                    & ul {
+                        list-style-type: none;
+                    }
+                    & h2 {
+                        padding-left: 14px;
+                        margin-bottom: 24px;
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-family: $fontFamily;
+                    }
+                    & h3 {
+                        margin: 13px 0;
+                        color: $colorText;
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-family: $fontFamily;
+                        padding-left: 14px;
+                    }
+                    & ul > li {
+                        padding-left: 34px;
+                        &:not(:last-child) {
+                            margin-bottom: 11px;
+                        }
+
+                        & > a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 .banner {
     background-color: #f1e4e6;
     .under__header {
-        background: url(img/men.png) no-repeat -199px;
+        background: url(img/men.png) no-repeat left;
         display: flex;
         height: calc(100vh - 80px);
         // background-size: calc(100vh - 15px);
         background-size: contain;
         @include alight__end();
+
         & h1 {
             padding-left: 20px;
             border-left: 12px solid #f16d7f;
             text-transform: uppercase;
             max-width: 425px;
-            font-size: 32px;
+            font-size: 30px;
+            margin-right: 99px;
             & > b {
                 font-weight: 900;
                 font-size: 48px;
@@ -1001,11 +1057,19 @@ button {
     }
 }
 @media (max-width: 768px) {
+    .header {
+        .heading {
+            .menu {
+                &__nav {
+                    right: -137px;
+                    width: 172px;
+                    top: 60px;
+                }
+            }
+        }
+    }
     .banner {
         .under__header {
-            background: url(img/men.png) no-repeat -158px;
-            // background-size: calc(100vh - 44px);
-            background-size: contain;
             & h1 {
                 max-width: 328px;
                 font-size: 24px;
@@ -1064,12 +1128,13 @@ button {
     .banner {
         .under__header {
             background-image: none;
-            height: 363px;
+
             & h1 {
                 max-width: 343px;
-                font-size: 24px;
+                font-size: 21px;
+                margin: 0;
                 & > b {
-                    font-size: 44px;
+                    font-size: 35px;
                 }
             }
         }
@@ -1109,10 +1174,27 @@ button {
     }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 350px) and (max-width: 425px) {
+    .header {
+        padding: 7px 0;
+        .heading {
+            .menu {
+                &__nav {
+                    right: -42px;
+                    width: 172px;
+                    top: 49px;
+                }
+            }
+        }
+    }
     .center__block {
         .product__box {
-            width: 317px;
+            width: 292px;
+            .item {
+                img {
+                    width: 292px;
+                }
+            }
         }
     }
     .card__box {
@@ -1121,6 +1203,7 @@ button {
             height: 217px;
         }
     }
+
     .footer {
         &__right p {
             width: 280px;
@@ -1134,3 +1217,8 @@ button {
         }
     }
 }
+// @media (max-width: 1440px) {
+//     .menu__nav {
+//         right: -241px;
+//     }
+// }
