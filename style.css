@@ -227,6 +227,7 @@ label {
 .center__block .product__box .item {
   position: relative;
   background: rgba(58, 56, 56, 0.86);
+  background-size: contain;
 }
 .center__block .product__box .item img {
   display: block;
@@ -553,9 +554,6 @@ label {
 }
 .center__block .filter__left > details details a {
   text-decoration: none;
-}
-.center__block .filter__left > details details [open] {
-  color: #f16d7f;
 }
 .center__block .filter__left details:first-child[open] {
   position: absolute;
@@ -1034,6 +1032,21 @@ label {
     width: 172px;
     top: 60px;
   }
+
+  .center__block .filters__right {
+    margin-right: 14px;
+  }
+
+  .product {
+    justify-content: space-evenly;
+  }
+  .product__box:last-child {
+    display: none;
+  }
+
+  .footer__bar {
+    justify-content: space-between;
+  }
 }
 @media (max-width: 900px) {
   .header .heading .menu__nav {
@@ -1051,17 +1064,8 @@ label {
     font-size: 35px;
   }
 
-  .card__box:not(:last-child) {
-    background-size: 100%;
-    width: 100%;
-    height: 260px;
-  }
-
   .footer__box {
     margin-top: 48px;
-  }
-  .footer__center {
-    flex-direction: column;
   }
   .footer__subscribe p {
     width: 360px;
@@ -1070,9 +1074,48 @@ label {
   .footer__subscribe form {
     margin-top: 22px;
   }
-  .footer__bar {
-    flex-direction: column-reverse;
-    align-items: center;
+
+  /*_________________Catalog__________________*/
+  .center__block .product {
+    justify-content: space-evenly;
+  }
+  .center__block .product__box {
+    width: 348px;
+  }
+  .center__block .product__box .item > img {
+    width: 350px;
+  }
+  .center__block .product__box:last-child {
+    display: none;
+  }
+  .center__block .filters__right {
+    margin-right: 0;
+  }
+}
+@media (max-width: 580px) {
+  .center__block .product {
+    justify-content: revert;
+  }
+  .center__block .product__box {
+    margin: 0 auto;
+  }
+  .center__block .product__box .item > img {
+    width: 350px;
+  }
+
+  /*________Catalog___________*/
+  .footer {
+    flex-direction: column;
+  }
+  .footer__box:last-child {
+    margin-bottom: 81px;
+  }
+  .footer__center {
+    flex-direction: column;
+  }
+  .footer__subscribe > form {
+    max-width: 310px;
+    margin-left: 24px;
   }
 }
 @media (max-width: 425px) {
@@ -1100,11 +1143,10 @@ label {
   .box {
     flex-direction: column;
   }
-
-  .card__box:not(:last-child) {
+  .box .card__box:not(:last-child) {
     background-size: 100%;
-    height: 170px;
     width: 100%;
+    height: 260px;
   }
 
   .footer {
@@ -1127,7 +1169,49 @@ label {
     margin-top: 22px;
   }
   .footer__bar {
+    flex-direction: column-reverse;
     align-items: center;
+  }
+
+  /*_____________________Catalog________________*/
+  .under__banner {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .center__block .product {
+    justify-content: revert;
+  }
+  .center__block .product__box {
+    margin: 0 auto;
+  }
+  .center__block .product__box .item > img {
+    width: 340px;
+  }
+  .center__block .product__box:last-child {
+    display: block;
+  }
+
+  .center__block_filters {
+    align-items: revert;
+  }
+  .center__block_filters .filter__left {
+    margin-left: 0;
+  }
+  .center__block_filters .filter__left details:first-child[open] {
+    width: 280px;
+  }
+  .center__block_filters .filter__left details > summary {
+    margin-left: 0;
+  }
+  .center__block_filters .filter__left details > summary > b {
+    display: none;
+  }
+  .center__block_filters .filter__left details > summary > svg {
+    margin-left: 0;
+  }
+  .center__block_filters .filters__right {
+    margin-right: 0;
   }
 }
 @media (max-width: 320px) {
@@ -1138,8 +1222,43 @@ label {
     width: 300px;
   }
 
+  .footer__center {
+    flex-direction: column;
+  }
   .footer__subscribe > form {
     max-width: 310px;
     margin-left: 24px;
+  }
+  .footer__bar {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  /*______Catalog_________*/
+  .under__banner {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .center__block_filters {
+    align-items: revert;
+  }
+  .center__block_filters .filter__left {
+    margin-left: 0;
+  }
+  .center__block_filters .filter__left details:first-child[open] {
+    width: 280px;
+  }
+  .center__block_filters .filter__left details > summary {
+    margin-left: 0;
+  }
+  .center__block_filters .filter__left details > summary > b {
+    display: none;
+  }
+  .center__block_filters .filter__left details > summary > svg {
+    margin-left: 0;
+  }
+  .center__block_filters .filters__right {
+    margin-left: 36px;
   }
 }/*# sourceMappingURL=style.css.map */
