@@ -1179,10 +1179,10 @@ label {
         .catalog {
             justify-content: space-evenly;
             & > .product__box {
-                width: 335px;
+                margin: 24px auto;
                 & .item {
                     & > img {
-                        width: 350px;
+                        width: 100%;
                     }
                 }
                 &:last-child {
@@ -1206,7 +1206,7 @@ label {
         .product {
             justify-content: revert;
             &__box {
-                margin: 0 auto;
+                margin: 24px auto;
                 & .item {
                     & > img {
                         width: 360px;
@@ -1361,10 +1361,9 @@ label {
         .catalog {
             justify-content: revert;
             & > .product__box {
-                margin: 0 auto;
                 & .item {
                     & > img {
-                        width: 340px;
+                        width: 100%;
                     }
                 }
                 &:last-child {
@@ -1416,7 +1415,7 @@ label {
             &__box {
                 & .item {
                     & > img {
-                        width: 300px;
+                        width: 100%;
                     }
                 }
             }
