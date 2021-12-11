@@ -128,7 +128,6 @@ label {
   top: 60px;
   right: -344px;
   padding: 20px;
-  overflow-y: scroll;
 }
 .header .heading .menu__nav div {
   position: relative;
@@ -587,7 +586,7 @@ label {
   color: #f16d7f;
 }
 .center__block .filter__left > details details > summary {
-  width: 327px;
+  max-width: 327px;
   border-left: 5px solid #f16d7f;
   border-bottom: 1px solid #ebebeb;
   padding: 10px;
@@ -769,7 +768,6 @@ label {
 }
 .product__cart .item img {
   width: 262px;
-  height: 306px;
   transition: all 2s 0s ease-out;
 }
 .product__cart .item img:hover {
@@ -977,7 +975,7 @@ label {
   display: flex;
 }
 .center__reg .action__reg {
-  width: 360px;
+  max-width: 360px;
   margin-bottom: 96px;
 }
 .center__reg .action__reg input {
@@ -1051,8 +1049,7 @@ label {
 .center__reg .info__reg {
   margin-left: 128px;
   margin-top: 64px;
-  width: 652px;
-  height: 334px;
+  max-width: 652px;
 }
 .center__reg .info__reg p {
   font-family: Lato;
@@ -1078,7 +1075,7 @@ label {
 /*_______________MEDIA___________________*/
 @media (max-width: 1182px) {
   .header .heading .menu__nav {
-    right: -155px;
+    right: -129px;
     width: 172px;
     top: 60px;
   }
@@ -1096,6 +1093,10 @@ label {
     right: -139px;
     width: 172px;
     top: 60px;
+  }
+
+  .menu__nav {
+    overflow-y: scroll;
   }
 
   .banner .under__header h1 {
@@ -1123,7 +1124,7 @@ label {
     justify-content: space-evenly;
   }
   .center__block .catalog > .product__box {
-    width: 348px;
+    width: 335px;
   }
   .center__block .catalog > .product__box .item > img {
     width: 350px;
@@ -1133,6 +1134,11 @@ label {
   }
   .center__block .filters__right {
     margin-right: 0;
+  }
+
+  /*____________________________REGISTRATION_______________*/
+  .center__reg .info__reg {
+    margin-left: 39px;
   }
 }
 @media (max-width: 580px) {
@@ -1180,6 +1186,19 @@ label {
   .product_filters details > summary {
     font-size: 9px;
   }
+
+  /*_____________REGISTRATION___________________*/
+  .center__reg {
+    flex-direction: column;
+  }
+  .center__reg .info__reg {
+    margin-bottom: 100px;
+    margin-left: 0;
+    max-width: 380px;
+  }
+  .center__reg .info__reg p {
+    font-size: 16px;
+  }
 }
 @media (max-width: 425px) {
   .header .heading .right a:not(:first-child) {
@@ -1209,7 +1228,11 @@ label {
   .box .card__box:not(:last-child) {
     background-size: 100%;
     width: 100%;
-    height: 260px;
+    max-height: 245px;
+  }
+
+  .center__block .browse {
+    margin-top: 65px;
   }
 
   .footer {
@@ -1275,6 +1298,17 @@ label {
   }
   .center__block_filters .filters__right {
     margin-right: 0;
+  }
+
+  /*__________________________REGISTRATION_______________*/
+  .center__reg .action__reg {
+    margin-bottom: 0;
+  }
+  .center__reg .action__reg input {
+    width: 285px;
+  }
+  .center__reg .action__reg p {
+    font-size: 13px;
   }
 }
 @media (max-width: 320px) {

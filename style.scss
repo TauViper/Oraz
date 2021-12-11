@@ -144,7 +144,7 @@ label {
                 top: 60px;
                 right: -344px;
                 padding: 20px;
-                overflow-y: scroll;
+
                 & div {
                     position: relative;
                     & label {
@@ -598,7 +598,7 @@ label {
                 color: black;
                 margin: 16px 15px 24px 17px;
                 & > summary {
-                    width: 327px;
+                    max-width: 327px;
                     border-left: 5px solid $colorText;
                     border-bottom: 1px solid #ebebeb;
                     padding: 10px;
@@ -798,7 +798,7 @@ label {
             overflow: hidden;
             img {
                 width: 262px;
-                height: 306px;
+
                 transition: all 2s 0s ease-out;
                 &:hover {
                     transform: scale(1.5);
@@ -1001,7 +1001,7 @@ label {
 .center__reg {
     display: flex;
     .action__reg {
-        width: 360px;
+        max-width: 360px;
         margin-bottom: 96px;
         & input {
             padding-left: 14px;
@@ -1072,8 +1072,8 @@ label {
     .info__reg {
         margin-left: 128px;
         margin-top: 64px;
-        width: 652px;
-        height: 334px;
+        max-width: 652px;
+
         & p {
             font-family: $fontFamily;
             font-weight: 300;
@@ -1108,7 +1108,7 @@ label {
         .heading {
             .menu {
                 &__nav {
-                    right: -155px;
+                    right: -129px;
                     width: 172px;
                     top: 60px;
                 }
@@ -1138,6 +1138,11 @@ label {
                     top: 60px;
                 }
             }
+        }
+    }
+    .menu {
+        &__nav {
+            overflow-y: scroll;
         }
     }
     .banner {
@@ -1174,7 +1179,7 @@ label {
         .catalog {
             justify-content: space-evenly;
             & > .product__box {
-                width: 348px;
+                width: 335px;
                 & .item {
                     & > img {
                         width: 350px;
@@ -1187,6 +1192,12 @@ label {
         }
         .filters__right {
             margin-right: 0;
+        }
+    }
+    /*____________________________REGISTRATION_______________*/
+    .center__reg {
+        .info__reg {
+            margin-left: 39px;
         }
     }
 }
@@ -1252,6 +1263,20 @@ label {
             }
         }
     }
+    /*_____________REGISTRATION___________________*/
+    .center__reg {
+        flex-direction: column;
+        .info__reg {
+            margin-bottom: 100px;
+            margin-left: 0;
+
+            max-width: 380px;
+
+            & p {
+                font-size: 16px;
+            }
+        }
+    }
 }
 @media (max-width: 425px) {
     .header {
@@ -1291,8 +1316,13 @@ label {
             &:not(:last-child) {
                 background-size: 100%;
                 width: 100%;
-                height: 260px;
+                max-height: 245px;
             }
+        }
+    }
+    .center__block {
+        .browse {
+            margin-top: 65px;
         }
     }
 
@@ -1364,6 +1394,18 @@ label {
         }
         .filters__right {
             margin-right: 0;
+        }
+    }
+    /*__________________________REGISTRATION_______________*/
+    .center__reg {
+        .action__reg {
+            margin-bottom: 0;
+            & input {
+                width: 285px;
+            }
+            & p {
+                font-size: 13px;
+            }
         }
     }
 }
